@@ -3,7 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+//Rutas
+import { APP_ROUTING } from './app.routes';
 
+//Servicios
+
+//Componentes
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/shared/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,6 +26,7 @@ import { FetchDataComponent } from './components/fetch-data/fetch-data.component
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    APP_ROUTING,
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
