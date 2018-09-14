@@ -15,6 +15,7 @@ import { NavMenuComponent } from './components/shared/nav-menu/nav-menu.componen
 import { HomeComponent } from './components/home/home.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
+import { CursosComponent } from './components/cursos/cursos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FetchDataComponent } from './components/fetch-data/fetch-data.component
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    CursosComponent
     
   ],
   imports: [
