@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //Rutas
 import { APP_ROUTING } from './app.routes';
 
@@ -22,10 +23,12 @@ import { FetchDataComponent } from './components/fetch-data/fetch-data.component
     HomeComponent,
     CounterComponent,
     FetchDataComponent
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    NgbModule,
     APP_ROUTING,
     FormsModule,
     RouterModule.forRoot([
