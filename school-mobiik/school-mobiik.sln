@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "school-mobiik", "school-mobiik\school-mobiik.csproj", "{3540901D-A4E8-4346-8861-5341EB4016B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "school-mobiik", "school-mobiik\school-mobiik.csproj", "{3540901D-A4E8-4346-8861-5341EB4016B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{54BF42F1-A159-476B-8E07-99058AC73B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.BussinessLayer", "SchoolMobiik.BussinessLayer\SchoolMobiik.BussinessLayer.csproj", "{053E7003-B351-4B37-B7C7-6A660D115158}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.DataAccess", "SchoolMobiik.DataAccess\SchoolMobiik.DataAccess.csproj", "{7470598F-DD4E-4037-A055-194E5B0FE33D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.DTOs", "SchoolMobiik.DTOs\SchoolMobiik.DTOs.csproj", "{1305368A-A096-4F8E-AC4A-792C7A67040C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.Api", "SchoolMobiik.Api\SchoolMobiik.Api.csproj", "{08944F2F-5AA4-463D-B10E-818FEB3F84D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +25,31 @@ Global
 		{3540901D-A4E8-4346-8861-5341EB4016B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3540901D-A4E8-4346-8861-5341EB4016B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3540901D-A4E8-4346-8861-5341EB4016B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053E7003-B351-4B37-B7C7-6A660D115158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053E7003-B351-4B37-B7C7-6A660D115158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053E7003-B351-4B37-B7C7-6A660D115158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053E7003-B351-4B37-B7C7-6A660D115158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7470598F-DD4E-4037-A055-194E5B0FE33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7470598F-DD4E-4037-A055-194E5B0FE33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7470598F-DD4E-4037-A055-194E5B0FE33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7470598F-DD4E-4037-A055-194E5B0FE33D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1305368A-A096-4F8E-AC4A-792C7A67040C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1305368A-A096-4F8E-AC4A-792C7A67040C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1305368A-A096-4F8E-AC4A-792C7A67040C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1305368A-A096-4F8E-AC4A-792C7A67040C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08944F2F-5AA4-463D-B10E-818FEB3F84D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08944F2F-5AA4-463D-B10E-818FEB3F84D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08944F2F-5AA4-463D-B10E-818FEB3F84D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08944F2F-5AA4-463D-B10E-818FEB3F84D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{053E7003-B351-4B37-B7C7-6A660D115158} = {54BF42F1-A159-476B-8E07-99058AC73B12}
+		{7470598F-DD4E-4037-A055-194E5B0FE33D} = {54BF42F1-A159-476B-8E07-99058AC73B12}
+		{1305368A-A096-4F8E-AC4A-792C7A67040C} = {54BF42F1-A159-476B-8E07-99058AC73B12}
+		{08944F2F-5AA4-463D-B10E-818FEB3F84D9} = {54BF42F1-A159-476B-8E07-99058AC73B12}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC09F2F9-13F7-49BC-ABB5-EC8ED03F37E9}
