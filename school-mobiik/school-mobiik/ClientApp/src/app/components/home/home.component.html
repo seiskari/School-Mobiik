@@ -19,9 +19,9 @@
 
     </ng-template>
   </ngb-panel>
-  <ngb-panel>
-
-<div class="jumbotron jumbotron-fluid">
+  </ngb-accordion>
+<button (click)= "mostrar = !mostrar" type="button" class="container"> Mostrar/Ocultar  </button>
+<div *ngIf="mostrar" class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Escuela Mobiik</h1>
     <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
