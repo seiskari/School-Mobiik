@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { APP_ROUTING } from './app.routes';
 
 //Servicios
+import { CursosService } from './services/cursos.service';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { HomeComponent } from './components/home/home.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
 import { CursosComponent } from './components/cursos/cursos.component';
+import { CursoTarjetaComponent } from './components/curso-tarjeta/curso-tarjeta.component';
+import { CursoComponent } from './components/curso/curso.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { CursosComponent } from './components/cursos/cursos.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    CursosComponent
+    CursosComponent,
+    CursoTarjetaComponent,
+    CursoComponent
     
   ],
   imports: [
@@ -39,7 +44,7 @@ import { CursosComponent } from './components/cursos/cursos.component';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [],
+  providers: [CursosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

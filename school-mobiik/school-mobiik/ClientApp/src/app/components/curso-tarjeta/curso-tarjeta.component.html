@@ -1,0 +1,21 @@
+<div class="card animated fadeIn fast">
+  <!--<img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">-->
+  <div class="card-body">
+    <h4 class="card-title">{{ curso.CourseId }}</h4>
+    <p class="card-text"> {{ curso.SignaturesId }} </p>
+    <p class="card-text"> {{ curso.SchoolId }} </p>
+    <p class="card-text"> {{ curso.TeacherId }} </p>
+    <p class="card-text"> {{ curso.MinToPass }} </p>
+    <p class="card-text"> {{ curso.Credits }} </p>
+    <p class="card-text"> {{ curso.SheduleId }} </p>
+    <p class="card-text"><small class="text-muted">{{ curso.Year }}</small></p>
+
+    <button (click)="verCurso()"
+            type="button" class="btn btn-outline-primary btn-block">
+      Ver más...
+    </button>
+    <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
+
+  </div>
+</div>
+

@@ -1,0 +1,26 @@
+<p>Hola</p>
+<h1 class="animated fadeIn">{{ curso.CourseId | uppercase }} <small>({{ curso.Year | date:'y' }})</small></h1>
+<hr>
+<div class="row animated fadeIn fast">
+
+  <div class="col-md-4">
+    <br><br>
+    <a [routerLink]="['/courses']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+  </div>
+
+  <div class="col-md-8">
+    <h3>{{ curso.CourseId  }}</h3>
+    <hr>
+    <p>
+      {{ curso.SignaturesId }}
+      {{ curso.SchoolId }}
+      {{ curso.TeacherId }}
+      {{ curso.MinToPass }}
+      {{ curso.Credits }}
+      {{ curso.SheduleId }}
+    </p>
+  </div>
+</div>
+
+
