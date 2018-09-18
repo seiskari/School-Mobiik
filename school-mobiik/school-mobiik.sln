@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "school-mobiik", "school-mob
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{54BF42F1-A159-476B-8E07-99058AC73B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.BussinessLayer", "SchoolMobiik.BussinessLayer\SchoolMobiik.BussinessLayer.csproj", "{053E7003-B351-4B37-B7C7-6A660D115158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.BussinessLayer", "SchoolMobiik.BussinessLayer\SchoolMobiik.BussinessLayer.csproj", "{053E7003-B351-4B37-B7C7-6A660D115158}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.DataAccess", "SchoolMobiik.DataAccess\SchoolMobiik.DataAccess.csproj", "{7470598F-DD4E-4037-A055-194E5B0FE33D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.DataAccess", "SchoolMobiik.DataAccess\SchoolMobiik.DataAccess.csproj", "{7470598F-DD4E-4037-A055-194E5B0FE33D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.DTOs", "SchoolMobiik.DTOs\SchoolMobiik.DTOs.csproj", "{1305368A-A096-4F8E-AC4A-792C7A67040C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.DTOs", "SchoolMobiik.DTOs\SchoolMobiik.DTOs.csproj", "{1305368A-A096-4F8E-AC4A-792C7A67040C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.Api", "SchoolMobiik.Api\SchoolMobiik.Api.csproj", "{08944F2F-5AA4-463D-B10E-818FEB3F84D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.Api", "SchoolMobiik.Api\SchoolMobiik.Api.csproj", "{08944F2F-5AA4-463D-B10E-818FEB3F84D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.Entities", "SchoolMobiik.Entities\SchoolMobiik.Entities.csproj", "{B1344B04-6E24-4DA4-A7ED-80432978E700}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{08944F2F-5AA4-463D-B10E-818FEB3F84D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08944F2F-5AA4-463D-B10E-818FEB3F84D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08944F2F-5AA4-463D-B10E-818FEB3F84D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1344B04-6E24-4DA4-A7ED-80432978E700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1344B04-6E24-4DA4-A7ED-80432978E700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1344B04-6E24-4DA4-A7ED-80432978E700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1344B04-6E24-4DA4-A7ED-80432978E700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{7470598F-DD4E-4037-A055-194E5B0FE33D} = {54BF42F1-A159-476B-8E07-99058AC73B12}
 		{1305368A-A096-4F8E-AC4A-792C7A67040C} = {54BF42F1-A159-476B-8E07-99058AC73B12}
 		{08944F2F-5AA4-463D-B10E-818FEB3F84D9} = {54BF42F1-A159-476B-8E07-99058AC73B12}
+		{B1344B04-6E24-4DA4-A7ED-80432978E700} = {54BF42F1-A159-476B-8E07-99058AC73B12}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC09F2F9-13F7-49BC-ABB5-EC8ED03F37E9}
