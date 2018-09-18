@@ -12,12 +12,12 @@ namespace SchoolMobiik.DataAccess
         {
 
         }
-        public IEnumerable<Course> GetCourse(string CourseId)
+        public IEnumerable<Course> GetCoursesSignature(string signatureName)
         {
             List<Course> CourseList = new List<Course>();
             using (var context = new SchoolDatabaseContext())
             {
-                var list = context.Course.Where(s => s.CourseId == CourseId).ToList();
+                var list = context.Course.Where(s => s.Signatures.SignaturesName == signatureName).ToList();
                
                 CourseList = list;
             }
