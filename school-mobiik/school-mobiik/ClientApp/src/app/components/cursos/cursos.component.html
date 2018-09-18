@@ -1,3 +1,9 @@
-<p>
-  cursos works!
-</p>
+<h1>Cursos <small>Todos...</small></h1>
+<hr>
+<div class="card-columns">
+ 
+  <app-curso-tarjeta (cursoSeleccionado)="verCurso( $event )" [curso]="foo" [index]="i" *ngFor="let foo of cursos; let i = index"></app-curso-tarjeta>
+
+</div>
+
+
