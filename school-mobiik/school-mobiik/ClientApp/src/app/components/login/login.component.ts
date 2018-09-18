@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   User = <ISchoolUser>{};
 
-  constructor() { }
+  constructor() { } 
 
   ngOnInit() {
     
