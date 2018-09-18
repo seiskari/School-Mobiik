@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ISchoolUser } from './model/school-user';
-import { ApplicationDataService } from '../services/application-data.service';
+import { ApplicationDataService } from '../../services/application-data.service';
 
 
 @Component({
