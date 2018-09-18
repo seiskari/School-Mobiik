@@ -1,6 +1,30 @@
+<!-- main app container -->
+<div>
+  <app-navbar></app-navbar>
+</div>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <alert></alert>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
 
-      <app-nav-menu></app-nav-menu>
+<!-- credits -->
 
-      <div class="container main-container">
-        <router-outlet></router-outlet>
-      </div>
+<div class="text-center">
+  <div>
+    <img src="../../assets/logo-mobiik.jpg" alt="" width="146">
+  </div>
+  <div>
+    <p>
+      Proyecto Escuela-Mobiik Semillero 2018
+    </p>
+    <p>
+      Copyright © 2018 Mobiik
+    </p>
+  </div>
+  </div>

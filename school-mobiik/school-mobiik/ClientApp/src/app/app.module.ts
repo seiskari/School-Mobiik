@@ -1,45 +1,51 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-//Rutas
-import { APP_ROUTING } from './app.routes';
+import { ReactiveFormsModule }    from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-//Servicios
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers';
 
-//Componentes
-import { AppComponent } from './app.component';
-import { NavMenuComponent } from './components/shared/nav-menu/nav-menu.component';
-import { HomeComponent } from './components/home/home.component';
-import { CounterComponent } from './components/counter/counter.component';
-import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
-import { CursosComponent } from './components/cursos/cursos.component';
+import { AppComponent }  from './app.component';
+import { routing }        from './app.routing';
+
+import { AlertComponent } from './_directives';
+import { AuthGuard } from './_guards';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { AlertService, AuthenticationService, UserService } from './_services';
+import { HomeComponent } from './home';
+import { LoginComponent } from './login';
+import { RegisterComponent } from './register';;
+import { NavbarComponent } from './navbar/navbar.component'
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
-    CursosComponent
-    
-  ],
-  imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    HttpClientModule,
-    NgbModule,
-    APP_ROUTING,
-    FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-    ])
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+      routing,
+
+      
+    ],
+    declarations: [
+        AppComponent,
+        AlertComponent,
+        HomeComponent,
+        LoginComponent,
+        RegisterComponent,
+        NavbarComponent],
+    providers: [
+        AuthGuard,
+        AlertService,
+        AuthenticationService,
+        UserService,
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+        // provider used to create fake backend
+        fakeBackendProvider
+    ],
+    bootstrap: [AppComponent]
 })
+
 export class AppModule { }
