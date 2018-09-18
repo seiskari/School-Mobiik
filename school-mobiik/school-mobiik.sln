@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.DTOs", "School
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.Api", "SchoolMobiik.Api\SchoolMobiik.Api.csproj", "{08944F2F-5AA4-463D-B10E-818FEB3F84D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.Entities", "SchoolMobiik.Entities\SchoolMobiik.Entities.csproj", "{B1344B04-6E24-4DA4-A7ED-80432978E700}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.Entities", "SchoolMobiik.Entities\SchoolMobiik.Entities.csproj", "{B1344B04-6E24-4DA4-A7ED-80432978E700}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

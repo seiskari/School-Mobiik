@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SchoolMobiik.DataAccess\SchoolMobiik.DataAccess.csproj" />
     <ProjectReference Include="..\SchoolMobiik.DTOs\SchoolMobiik.DTOs.csproj" />
   </ItemGroup>
 
