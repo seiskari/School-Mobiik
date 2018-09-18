@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ISchoolUser } from '../../login/model/school-user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -21,8 +22,9 @@ export class SchoolUserHttpService {
     return this.http.get<ISchoolUser[]>(this.schoolUserUrl);
   }
 
-  GetTeacher(SchoolUserId: number) {
-    const url = `${this.schoolUserUrl}/${SchoolUserId}`;
+  GetUser(userName: string, password: string) {
+    
+    const url = `${this.schoolUserUrl}/${userName}/${password}`;
     return this.http.get<ISchoolUser>(url)
   }
 
