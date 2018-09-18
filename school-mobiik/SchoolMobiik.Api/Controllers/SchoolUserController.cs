@@ -26,7 +26,7 @@ namespace SchoolMobiik.Api.Controllers
             proccessUserSchool = new ProccessUserSchool();
         }
 
-        [HttpGet, Route("SchoolUser/{userName}/{password}")]
+        [Microsoft.AspNetCore.Mvc.HttpPost, Route("SchoolUser/{userName}/{password}")]
         [ResponseType(typeof(SchoolUserDTO))]
         public HttpResponseMessage GetSchoolUser (string userName, string password)
         {
