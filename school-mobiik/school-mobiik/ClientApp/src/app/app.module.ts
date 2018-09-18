@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
 import { CursosComponent } from './components/cursos/cursos.component';
+import { LoginComponent } from './components/login/login.component';
 import { CursoTarjetaComponent } from './components/curso-tarjeta/curso-tarjeta.component';
 import { CursoComponent } from './components/curso/curso.component';
 
@@ -29,7 +30,9 @@ import { CursoComponent } from './components/curso/curso.component';
     FetchDataComponent,
     CursosComponent,
     CursoTarjetaComponent,
-    CursoComponent
+    CursoComponent,
+    CursosComponent,
+    LoginComponent
     
   ],
   imports: [
