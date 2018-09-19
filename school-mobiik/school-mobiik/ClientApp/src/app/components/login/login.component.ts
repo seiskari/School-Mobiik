@@ -22,8 +22,12 @@ export class LoginComponent implements OnInit {
   LogIn() {
 
     this.schoolUserHttpService.PostUser(this.User).subscribe(
-      data => console.log(data)
+      data => {
+        console.log(data),
+        this.User = data
+      }
     )
+
     console.log(this.User);
     
   };
