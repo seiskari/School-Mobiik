@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './curso.component.html'
 })
 export class CursoComponent {
-  curso: any = {};
+  curso: any[] = [];
   constructor(private activatedRoute: ActivatedRoute,
     private _cursosService: CursosService) {
 

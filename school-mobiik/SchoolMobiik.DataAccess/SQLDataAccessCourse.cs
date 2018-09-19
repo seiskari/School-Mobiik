@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using SchoolMobiik.Entity;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace SchoolMobiik.DataAccess
 {
@@ -26,6 +27,15 @@ namespace SchoolMobiik.DataAccess
             return CourseList;
         }
 
+        public IEnumerable<Course> GetCourses(string schoolId)
+        {
+            List<Course> CourseList = new List<Course>();
+            using (var context = new SemillerosDBContext())
+            {
+                var list = context.Course.Include(c => c.Teacher)
+                    .ThenInclude(t => t.Person)
+                    .Include(s => s.Signatures).ToList();
+                //var list = context.Course.Where(s => s.SchoolId == schoolId).ToList();
         //public IEnumerable<Course> GetCourses(string schoolId)
         //{
         //    List<Course> CourseList = new List<Course>();

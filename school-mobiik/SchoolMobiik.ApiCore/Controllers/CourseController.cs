@@ -9,7 +9,7 @@ using SchoolMobiik.DTOs;
 
 namespace SchoolMobiik.ApiCore.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("schools")]
     [ApiController]
     public class CourseController : ControllerBase
     {
@@ -20,7 +20,7 @@ namespace SchoolMobiik.ApiCore.Controllers
         }
 
         // GET api/values
-        [HttpGet]
+        [HttpGet("{schoolId}/courses")]
         public IEnumerable<CourseMainDto> Get(string schoolId)
         {
             schoolId = "Escuela1";

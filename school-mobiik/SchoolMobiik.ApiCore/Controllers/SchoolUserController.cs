@@ -9,6 +9,7 @@ using SchoolMobiik.BussinessLayer;
 using System.Web.Http.Description;
 using System.Net.Http;
 using System.Net;
+using SchoolMobiik.Entities;
 
 namespace SchoolMobiik.ApiCore.Controllers
 {
@@ -24,15 +25,15 @@ namespace SchoolMobiik.ApiCore.Controllers
             proccessUserSchool = new ProccessUserSchool();
         }
 
-        [HttpGet, Route("api/SchoolUser/{userName}/{password}")]
+        [HttpPost, Route("api/SchoolUser/")]
         //[HttpGet]
         [ResponseType(typeof(SchoolUserDTO))]
-        public SchoolUserDTO GetSchoolUser(string userName, string password)
+        public SchoolUserDTO PostSchoolUser([FromBody]SchoolUserDTO schoolUser)
         {
             //userName = "Juanga";
             //password = "reseña";
             HttpRequestMessage Request = new HttpRequestMessage();
-            SchoolUserDTO schoolUserDTO = proccessUserSchool.GetUserSchool(userName, password);
+            SchoolUserDTO schoolUserDTO = proccessUserSchool.GetUserSchool(schoolUser.UserName, schoolUser.Password);
             if (schoolUserDTO != null)
             {             
                 return schoolUserDTO;
