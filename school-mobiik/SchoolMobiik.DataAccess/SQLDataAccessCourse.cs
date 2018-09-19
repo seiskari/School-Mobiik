@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SchoolMobiik.Entities;
+using SchoolMobiik.Entity;
 using System.Linq;
 
 namespace SchoolMobiik.DataAccess
@@ -15,7 +15,7 @@ namespace SchoolMobiik.DataAccess
         public IEnumerable<Course> GetCoursesSignature(string signatureName)
         {
             List<Course> CourseList = new List<Course>();
-            using (var context = new SchoolDatabaseContext())
+            using (var context = new SemillerosDBContext())
             {
                 var list = context.Course.Where(s => s.Signatures.SignaturesName == signatureName).ToList();
                
@@ -27,7 +27,7 @@ namespace SchoolMobiik.DataAccess
         public IEnumerable<Course> GetCourses(string schoolId)
         {
             List<Course> CourseList = new List<Course>();
-            using (var context = new SchoolDatabaseContext())
+            using (var context = new SemillerosDBContext())
             {
                 var list = context.Course.Where(s => s.SchoolId == schoolId).ToList();
 

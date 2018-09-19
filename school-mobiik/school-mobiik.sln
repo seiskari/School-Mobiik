@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.DTOs", "School
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.Entities", "SchoolMobiik.Entities\SchoolMobiik.Entities.csproj", "{B1344B04-6E24-4DA4-A7ED-80432978E700}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.ApiCore", "SchoolMobiik.ApiCore\SchoolMobiik.ApiCore.csproj", "{250E0A7C-B4AC-4C6B-A790-FC3A8FA71D18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolMobiik.ApiCore", "SchoolMobiik.ApiCore\SchoolMobiik.ApiCore.csproj", "{250E0A7C-B4AC-4C6B-A790-FC3A8FA71D18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMobiik.Entity", "SchoolMobiik.Entity\SchoolMobiik.Entity.csproj", "{95ACE38F-CF0C-4788-A6FC-9D728C2D6E31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{250E0A7C-B4AC-4C6B-A790-FC3A8FA71D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{250E0A7C-B4AC-4C6B-A790-FC3A8FA71D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{250E0A7C-B4AC-4C6B-A790-FC3A8FA71D18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95ACE38F-CF0C-4788-A6FC-9D728C2D6E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95ACE38F-CF0C-4788-A6FC-9D728C2D6E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95ACE38F-CF0C-4788-A6FC-9D728C2D6E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95ACE38F-CF0C-4788-A6FC-9D728C2D6E31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{1305368A-A096-4F8E-AC4A-792C7A67040C} = {54BF42F1-A159-476B-8E07-99058AC73B12}
 		{B1344B04-6E24-4DA4-A7ED-80432978E700} = {54BF42F1-A159-476B-8E07-99058AC73B12}
 		{250E0A7C-B4AC-4C6B-A790-FC3A8FA71D18} = {54BF42F1-A159-476B-8E07-99058AC73B12}
+		{95ACE38F-CF0C-4788-A6FC-9D728C2D6E31} = {54BF42F1-A159-476B-8E07-99058AC73B12}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC09F2F9-13F7-49BC-ABB5-EC8ED03F37E9}
