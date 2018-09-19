@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SchoolMobiik.DTOs;
-using SchoolMobiik.Entities;
+using SchoolMobiik.Entity;
 using SchoolMobiik.DataAccess;
 using System.Security.Cryptography;
 

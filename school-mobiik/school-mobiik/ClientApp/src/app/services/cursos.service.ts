@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CursosService {
   private cursos: Curso[] = [
     {
@@ -43,10 +41,10 @@ export class CursosService {
   }
 
   getCurso(idx:number):any {
-    this.cursos[idx];
+    return this.cursos[idx];
   }
 
-  buscarHeroes(termino: string): Curso[] {
+  buscarCursos(termino: string): Curso[] {
 
     let cursosArr: Curso[] = [];
     termino = termino.toLowerCase();
@@ -61,14 +59,9 @@ export class CursosService {
         curso.idx = i;
         cursosArr.push(curso)
       }
-
     }
-
     return cursosArr;
-
   }
-
-
 }
 
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SchoolMobiik.Entities;
+using SchoolMobiik.Entity;
 using System.Linq;
 
 namespace SchoolMobiik.DataAccess
@@ -14,7 +14,7 @@ namespace SchoolMobiik.DataAccess
 
         public SchoolUser GetSchoolUser(string userName)
         {
-            using (var context = new SchoolDatabaseContext())
+            using (var context = new SemillerosDBContext())
             {
                 var SchoolUserRegistered = context.SchoolUser.Where(s => s.UserName == userName).FirstOrDefault() ;
                 return SchoolUserRegistered;

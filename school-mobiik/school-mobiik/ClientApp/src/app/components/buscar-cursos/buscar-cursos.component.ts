@@ -15,7 +15,7 @@ export class BuscarCursosComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       this.termino = params['termino'];
-      this.curso = this._cursosService.buscarHeroes(params['termino']);
+      this.curso = this._cursosService.buscarCursos(params['termino']);
       console.log(this.curso);
     })
   }
