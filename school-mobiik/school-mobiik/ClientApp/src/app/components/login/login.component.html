@@ -17,7 +17,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 login-sec">
-        <h2 class="text-center">Iniciar Sesión</h2>
+        <img src="../../../assets/logo-mobiik.jpg" class="img-responsive center-block" />
+        <h2 class="text-center"></h2>
         <div class="login-form">
           <div class="form-group">
             <label for="inputEmail" class="sr-only">Email </label>
@@ -57,12 +58,16 @@
     <div class="col-md-8">
       <app-cursos></app-cursos>
     </div>
+    
     <div class="col-md-4">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar cursos" aria-label="Search" (keyup.enter)="buscarCursos(BuscarCursos.value)" #BuscarCursos>
-        <button (click)="buscarCursos(BuscarCursos.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar Cursos</button>
-      </form>
-    </div>
+      <div class="container-fluid">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar cursos" aria-label="Search" (keyup.enter)="buscarCursos(BuscarCursos.value)" #BuscarCursos>
+          <button (click)="buscarCursos(BuscarCursos.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar Cursos</button>
+        </form>
+      </div>
+      </div>
+    
   </div>
 
 </div>
