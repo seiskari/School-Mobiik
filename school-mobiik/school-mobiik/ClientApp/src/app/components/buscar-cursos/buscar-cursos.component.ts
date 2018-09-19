@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CursosService } from '../../services/cursos.service'
 
 @Component({
   selector: 'app-buscar-cursos',
   templateUrl: './buscar-cursos.component.html'
 })
 export class BuscarCursosComponent implements OnInit {
-
-  constructor(private activatedRoute: ActivatedRoute) { }
+  curso: any[] = [];
+  termino: string;
+  constructor(private activatedRoute: ActivatedRoute,
+              private _cursosService: CursosService) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      console.log(params['termino']);
+      this.termino = params['termino'];
+      this.curso = this._cursosService.buscarHeroes(params['termino']);
+      console.log(this.curso);
     })
   }
 

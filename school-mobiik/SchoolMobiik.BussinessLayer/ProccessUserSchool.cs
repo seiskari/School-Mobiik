@@ -16,8 +16,7 @@ namespace SchoolMobiik.BussinessLayer
             using (var dataAccess = new SQLDataAccessSchoolUser())
             {
                 SchoolUser schoolUser = dataAccess.GetSchoolUser(userName);
-                //if (schoolUser != null && schoolUser.Password == GetMD5(password))
-                if (schoolUser != null && schoolUser.Password == password)
+                if (schoolUser != null && schoolUser.Password == GetMD5(password) && schoolUser.IsActive == true)                    
                 {
                     return MapEntityToDto(schoolUser);
                 }

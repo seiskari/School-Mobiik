@@ -23,6 +23,7 @@ namespace SchoolMobiik.ApiCore.Controllers
         [HttpGet]
         public IEnumerable<CourseMainDto> Get(string schoolId)
         {
+            schoolId = "Escuela1";
             var courseList = processCourse.GetCoursesBySchool(schoolId);
             return courseList;
             //return new string[] { "value1", "value2" };
