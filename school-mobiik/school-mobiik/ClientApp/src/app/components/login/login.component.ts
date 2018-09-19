@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ISchoolUser } from './model/school-user';
 import { ApplicationDataService } from '../../services/application-data.service';
 import { SchoolUserHttpService } from '../services/httpService/school-user-http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   User = <ISchoolUser>{};
 
-  constructor(private schoolUserHttpService: SchoolUserHttpService) { }
+  constructor(private schoolUserHttpService: SchoolUserHttpService, private router: Router) { }
 
   ngOnInit() {
     
@@ -31,4 +32,9 @@ export class LoginComponent implements OnInit {
     console.log(this.User);
     
   };
+
+  buscarCursos(termino: string) {
+    console.log(termino);
+    this.router.navigate(['/buscar', termino]);
+  }
 }
