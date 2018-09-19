@@ -42,7 +42,7 @@ export class CursosService {
     return this.cursos;
   }
 
-  getCurso(idx:string) {
+  getCurso(idx:number):any {
     this.cursos[idx];
   }
 
