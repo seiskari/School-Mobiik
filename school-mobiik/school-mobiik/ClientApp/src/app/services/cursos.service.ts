@@ -46,7 +46,32 @@ export class CursosService {
     this.cursos[idx];
   }
 
+  buscarHeroes(termino: string): Curso[] {
+
+    let cursosArr: Curso[] = [];
+    termino = termino.toLowerCase();
+
+    for (let i = 0; i < this.cursos.length; i++) {
+
+      let curso = this.cursos[i];
+
+      let nombre = curso.CourseId.toLowerCase();
+
+      if (nombre.indexOf(termino) >= 0) {
+        curso.idx = i;
+        cursosArr.push(curso)
+      }
+
+    }
+
+    return cursosArr;
+
+  }
+
+
 }
+
+
 
 export interface Curso {
   CourseId: string;
@@ -60,4 +85,5 @@ export interface Curso {
   EndDate: string;
   IsActive: boolean;
   ScheduleId: number;
+  idx?: number;
 };
