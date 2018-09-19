@@ -13,6 +13,7 @@
     <ProjectReference Include="..\SchoolMobiik.DataAccess\SchoolMobiik.DataAccess.csproj" />
     <ProjectReference Include="..\SchoolMobiik.DTOs\SchoolMobiik.DTOs.csproj" />
     <ProjectReference Include="..\SchoolMobiik.Entities\SchoolMobiik.Entities.csproj" />
+    <ProjectReference Include="..\SchoolMobiik.Entity\SchoolMobiik.Entity.csproj" />
   </ItemGroup>
 
 </Project>

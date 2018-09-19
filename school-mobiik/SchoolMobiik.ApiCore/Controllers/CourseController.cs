@@ -24,10 +24,15 @@ namespace SchoolMobiik.ApiCore.Controllers
         public IEnumerable<CourseMainDto> Get(string schoolId)
         {
             schoolId = "Escuela1";
-            var courseList = processCourse.GetCoursesBySchool(schoolId);
-            return courseList;
+            //var courseList = processCourse.GetCoursesBySchool(schoolId);
+
+            string signatureName = "Español";
+            var courseList2 = processCourse.GetCourseBySignatureName(signatureName);
+            return courseList2;
             //return new string[] { "value1", "value2" };
         }
 
+
+      
     }
 }

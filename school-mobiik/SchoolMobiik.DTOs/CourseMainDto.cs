@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SchoolMobiik.Entities;
+using SchoolMobiik.Entity;
 
 namespace SchoolMobiik.DTOs
 {

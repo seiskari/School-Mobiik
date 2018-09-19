@@ -22,6 +22,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SchoolMobiik.BussinessLayer\SchoolMobiik.BussinessLayer.csproj" />
+    <ProjectReference Include="..\SchoolMobiik.Entities\SchoolMobiik.Entities.csproj" />
+    <ProjectReference Include="..\SchoolMobiik.Entity\SchoolMobiik.Entity.csproj" />
   </ItemGroup>
 
 </Project>
