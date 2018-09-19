@@ -12,8 +12,9 @@ using System.Net;
 
 namespace SchoolMobiik.ApiCore.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
+    
     public class SchoolUserController : ControllerBase
     {
         ProccessUserSchool proccessUserSchool;
@@ -23,13 +24,13 @@ namespace SchoolMobiik.ApiCore.Controllers
             proccessUserSchool = new ProccessUserSchool();
         }
 
-        //[HttpGet, Route("SchoolUser/{userName}/{password}")]
-        [HttpGet]
+        [HttpGet, Route("api/SchoolUser/{userName}/{password}")]
+        //[HttpGet]
         [ResponseType(typeof(SchoolUserDTO))]
         public SchoolUserDTO GetSchoolUser(string userName, string password)
         {
-            userName = "Juanga";
-            password = "reseña";
+            //userName = "Juanga";
+            //password = "reseña";
             HttpRequestMessage Request = new HttpRequestMessage();
             SchoolUserDTO schoolUserDTO = proccessUserSchool.GetUserSchool(userName, password);
             if (schoolUserDTO != null)
