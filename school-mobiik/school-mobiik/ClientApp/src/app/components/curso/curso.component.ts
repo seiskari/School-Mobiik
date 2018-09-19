@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CursosService } from '../../services/cursos.service';
+import { Component, Input } from '@angular/core';
+import { CursosService, Curso } from '../../services/cursos.service';
 
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,17 +8,17 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-curso',
   templateUrl: './curso.component.html'
 })
-export class CursoComponent implements OnInit {
+export class CursoComponent {
   curso: any = {};
   constructor(private activatedRoute: ActivatedRoute,
     private _cursosService: CursosService) {
-    
+
     this.activatedRoute.params.subscribe(params => {
       this.curso = this._cursosService.getCurso(params['id']);
+      console.log(params['id']);
+      console.log(this.curso);
     });
   }
 
-  ngOnInit() {
-  }
 
 }

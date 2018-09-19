@@ -1,18 +1,49 @@
-<body class="text-center animated fadeIn fast">
+<head>
+  <!--<style>
+    .container-fluid {
+      background-image: url("../../../assets/Scuola.jpg");
+      height:500px;
+    }
+  </style>-->
 
-  
-  <div class="form-signin">
-    <img class="mb-4" src="../../assets/logo-mobiik.jpg" alt="" width="146" />
-    <h1 class="h3 mb-3 font-weight-normal">Inicio de Sesión</h1>
-    <label for="inputEmail" class="sr-only">Email </label>
-    <input type="email" id="inputEmail" [(ngModel)]="User.Username" class="form-control" placeholder="Correo Electrónico" required="" autofocus="" />
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" [(ngModel)]="User.Password" class="form-control" placeholder="Contraseña" required="">
-    <div class="checkbox mb-3">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+  <section class="container-fluid" >
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 login-sec">
+          <h2 class="text-center">Iniciar Sesión</h2>
+          <div class="login-form">
+            <div class="form-group">
+              <label for="inputEmail" class="sr-only">Email </label>
+              <input type="email" id="inputEmail" [(ngModel)]="User.Username" class="form-control" placeholder="Correo Electrónico" required="" autofocus="" />
+
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" [(ngModel)]="User.Password" class="form-control" placeholder="Contraseña" required="">
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="LogIn()">Iniciar Sesión</button>
+          </div>
+
+        </div>
+        <div class="col-md-8 banner-sec">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <br />
+    <div class="container">
+      <app-cursos></app-cursos>
 
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="LogIn()">Iniciar Sesión</button>
-  </div>
 
-</body>
-x
+    
+
+

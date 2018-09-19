@@ -20,6 +20,7 @@ import { CursosComponent } from './components/cursos/cursos.component';
 import { LoginComponent } from './components/login/login.component';
 import { CursoTarjetaComponent } from './components/curso-tarjeta/curso-tarjeta.component';
 import { CursoComponent } from './components/curso/curso.component';
+import { BuscarCursosComponent } from './components/buscar-cursos/buscar-cursos.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CursoComponent } from './components/curso/curso.component';
     CursoTarjetaComponent,
     CursoComponent,
     CursosComponent,
-    LoginComponent
+    LoginComponent,
+    BuscarCursosComponent
     
   ],
   imports: [
