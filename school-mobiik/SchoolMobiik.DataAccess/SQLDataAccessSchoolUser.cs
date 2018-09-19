@@ -8,15 +8,15 @@ namespace SchoolMobiik.DataAccess
 {
     public class SQLDataAccessSchoolUser : IDisposable
     {
-        public SQLDataAccessSchoolUser()
-        {
+        public SQLDataAccessSchoolUser()        
+        {            
         }
 
         public SchoolUser GetSchoolUser(string userName)
         {
             using (var context = new SchoolDatabaseContext())
             {
-                var SchoolUserRegistered = context.SchoolUser.SingleOrDefault(s => s.UserName == userName);
+                var SchoolUserRegistered = context.SchoolUser.Where(s => s.UserName == userName).FirstOrDefault() ;
                 return SchoolUserRegistered;
             }
         }
