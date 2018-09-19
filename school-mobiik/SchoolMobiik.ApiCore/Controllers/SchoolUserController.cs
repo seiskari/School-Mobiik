@@ -23,13 +23,11 @@ namespace SchoolMobiik.ApiCore.Controllers
             proccessUserSchool = new ProccessUserSchool();
         }
 
-        //[HttpGet, Route("SchoolUser/{userName}/{password}")]
-        [HttpGet]
+        [HttpGet ("{userName}/{password}")]
+        //[HttpGet("{id}")]        
         [ResponseType(typeof(SchoolUserDTO))]
         public SchoolUserDTO GetSchoolUser(string userName, string password)
-        {
-            userName = "Juanga";
-            password = "reseña";
+        {            
             HttpRequestMessage Request = new HttpRequestMessage();
             SchoolUserDTO schoolUserDTO = proccessUserSchool.GetUserSchool(userName, password);
             if (schoolUserDTO != null)
