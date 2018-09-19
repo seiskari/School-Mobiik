@@ -23,19 +23,17 @@ export class SchoolUserHttpService {
     return this.http.get<ISchoolUser[]>(this.schoolUserUrl);
   }
 
-  GetUser(userName: string, password: string) {
-    
-    const url = `${this.schoolUserUrl}/${userName}/${password}`;
-    return this.http.get<ISchoolUser>(url)
+  PostUser(user: ISchoolUser) {
+    return this.http.post(this.schoolUserUrl, user)
   }
 
   UpdateUser(schoolUser: ISchoolUser) {
     return this.http.put(this.schoolUserUrl, schoolUser, httpOptions)
   }
 
-  PostUser(schoolUser: ISchoolUser) {
-    return this.http.post(this.schoolUserUrl, schoolUser);
-  }
+  //PostUser(schoolUser: ISchoolUser) {
+  //  return this.http.post(this.schoolUserUrl, schoolUser);
+  //}
 
   DeleteUser(schoolUserId: number) {
     return this.http.delete(this.schoolUserUrl + '/' + schoolUserId);
