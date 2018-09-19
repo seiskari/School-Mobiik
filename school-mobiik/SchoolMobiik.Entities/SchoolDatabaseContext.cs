@@ -6,7 +6,7 @@ namespace SchoolMobiik.Entities
 {
     public partial class SchoolDatabaseContext : DbContext
     {
-        public SchoolDatabaseContext()
+        public SchoolDatabaseContext()            
         {
         }
 
@@ -37,9 +37,8 @@ namespace SchoolMobiik.Entities
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-QKPP8KV;Database=SchoolDatabase;Trusted_Connection=True;");
+            { 
+                optionsBuilder.UseSqlServer("Server=semillerosdb.database.windows.net;Database=SemillerosDB;Persist Security Info=False;User ID=semilleros;Password=Password123");
             }
         }
 
@@ -273,7 +272,7 @@ namespace SchoolMobiik.Entities
 
             modelBuilder.Entity<SchoolUser>(entity =>
             {
-                entity.HasKey(e => e.PersonId);
+                entity.HasKey(e => e.SchoolUserId);
 
                 entity.Property(e => e.IsActive)
                     .IsRequired()

@@ -4,20 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
 using SchoolMobiik.DTOs;
 using SchoolMobiik.BussinessLayer;
-using System.Net;
 using System.Web.Http.Description;
-using System.Web.Http;
-using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
-using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
 using System.Net.Http;
+using System.Net;
 
-namespace SchoolMobiik.Api.Controllers
+namespace SchoolMobiik.ApiCore.Controllers
 {
-    [Route("api/SchoolUser")]
-    public class SchoolUserController : ApiController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class SchoolUserController : ControllerBase
     {
         ProccessUserSchool proccessUserSchool;
 
@@ -26,20 +23,23 @@ namespace SchoolMobiik.Api.Controllers
             proccessUserSchool = new ProccessUserSchool();
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpPost, Route("SchoolUser/{userName}/{password}")]
+        //[HttpGet, Route("SchoolUser/{userName}/{password}")]
+        [HttpGet]
         [ResponseType(typeof(SchoolUserDTO))]
-        public HttpResponseMessage GetSchoolUser (string userName, string password)
+        public SchoolUserDTO GetSchoolUser(string userName, string password)
         {
+            userName = "Juanga";
+            password = "reseña";
+            HttpRequestMessage Request = new HttpRequestMessage();
             SchoolUserDTO schoolUserDTO = proccessUserSchool.GetUserSchool(userName, password);
             if (schoolUserDTO != null)
-            {
-                return Request.CreateResponse(HttpStatusCode.OK);
+            {             
+                return schoolUserDTO;
             }
             else
-            {
-                return Request.CreateResponse(HttpStatusCode.NotFound);
+            {                
+                return schoolUserDTO;
             }
         }
-
     }
 }
