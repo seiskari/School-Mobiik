@@ -65,10 +65,10 @@ namespace SchoolMobiik.DataAccess
         //        });            
 
 
-        //        CourseList = list;
-        //    }
-        //    return CourseList;
-        //}
+                CourseList = list;
+            }
+           return CourseList;
+        }
 
         public void Dispose()
         {

@@ -17,7 +17,7 @@ namespace SchoolMobiik.Entity
         public string Curp { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public int RolId { get; set; }
+        public int SchoolUser { get; set; }
         public string PersonFirstName { get; set; }
         public string PersonLastName { get; set; }
 

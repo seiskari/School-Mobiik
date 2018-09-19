@@ -195,7 +195,7 @@ namespace SchoolMobiik.Entity
                 entity.HasIndex(e => e.AddressId)
                     .HasName("IX_FK_PERSON_ADDRESS");
 
-                entity.HasIndex(e => e.RolId)
+                entity.HasIndex(e => e.SchoolUser)
                     .HasName("IX_FK_PERSON_ROL");
 
                 entity.Property(e => e.Birthday)
@@ -234,7 +234,7 @@ namespace SchoolMobiik.Entity
 
                 entity.HasOne(d => d.Rol)
                     .WithMany(p => p.Person)
-                    .HasForeignKey(d => d.RolId)
+                    .HasForeignKey(d => d.SchoolUser)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_PERSON_ROL");
             });
