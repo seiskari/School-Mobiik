@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SchoolMobiik.DTOs;
-using SchoolMobiik.Entities;
+using SchoolMobiik.Entity;
 using SchoolMobiik.DataAccess;
 using System.Linq;
 
@@ -50,7 +50,7 @@ namespace SchoolMobiik.BussinessLayer
             {
                 CourseId = course.CourseId,
                 SchoolId = course.SchoolId,
-                TeacherName = course.Teacher.Person.PersonName,
+                TeacherName = course.Teacher.Person.PersonFirstName,
                 Year = course.Year,
                 SignatureName = course.Signatures.SignaturesName,
                 IsActive = course.IsActive
