@@ -1,1 +1,16 @@
 <h1>Buscando:<small>{{ termino }}</small></h1>
+<br />
+<br />
+<div class="row" *ngIf="curso.length == 0">
+  <div class="col-md-8">
+    <div class="alert alert-info" role="alert">
+      No exite resultado para el termino: {{ termino }}
+    </div>
+  </div>
+</div>
+
+<div class="card-columns">
+  <div class="col-10"></div>
+  <app-curso-tarjeta [curso]="foo" [index]="i" *ngFor="let foo of curso; let i = index"></app-curso-tarjeta>
+
+</div>
