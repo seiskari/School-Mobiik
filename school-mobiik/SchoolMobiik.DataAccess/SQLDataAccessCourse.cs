@@ -32,7 +32,7 @@ namespace SchoolMobiik.DataAccess
             List<Course> CourseList = new List<Course>();
             using (var context = new SemillerosDBContext())
             {
-                var list = context.Course.Include(c => c.Teacher)
+                var list = context.Course.Where(s => s.SchoolId == schoolId).Include(c => c.Teacher)
                     .ThenInclude(t => t.Person)
                     .Include(s => s.Signatures).ToList();
                 //var list = context.Course.Where(s => s.SchoolId == schoolId).ToList();
