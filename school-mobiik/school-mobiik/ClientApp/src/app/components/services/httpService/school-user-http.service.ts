@@ -8,13 +8,14 @@ const httpOptions = {
 };
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class SchoolUserHttpService {
 
 
-  private schoolUserUrl = 'http://localhost:38237/api/SchoolUser';  // URL to web api
+  private schoolUserUrl = 'http://localhost:27827/api/SchoolUser';  // URL to web api
 
   constructor(private http: HttpClient) { }
 
