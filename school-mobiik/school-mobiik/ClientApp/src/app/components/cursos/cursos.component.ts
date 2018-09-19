@@ -20,5 +20,9 @@ export class CursosComponent implements OnInit {
   verCurso(idx: number) {
     this.router.navigate(['/course', idx]);
   }
+  buscarCursos(termino: string) {
+    console.log(termino);
+    this.router.navigate(['/buscar', termino]);
+  }
 
 }
