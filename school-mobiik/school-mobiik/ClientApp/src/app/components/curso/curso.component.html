@@ -1,11 +1,11 @@
 <p>Hola</p>
-<h1 class="animated fadeIn">{{ curso.CourseId | uppercase }} <small>({{ curso.Year | date:'y' }})</small></h1>
+<h1 class="animated fadeIn">{{ curso.CourseId | uppercase }} <small>(Hola {{ curso.Year | date:'y' }})</small></h1>
 <hr>
 <div class="row animated fadeIn fast">
 
   <div class="col-md-4">
     <br><br>
-    <a [routerLink]="['/courses']" class="btn btn-outline-danger btn-block">Regresar</a>
+    <a [routerLink]="['/course']" class="btn btn-outline-danger btn-block">Regresar</a>
 
   </div>
 
