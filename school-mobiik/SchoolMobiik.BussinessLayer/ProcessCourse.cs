@@ -25,19 +25,21 @@ namespace SchoolMobiik.BussinessLayer
             return listCourses;
         }
 
-        public IEnumerable<CourseMainDto> GetCourseBySignatureName(string signatureName)
+        public IEnumerable<CourseMainDto> GetCourseBySignatureName(string schoolId,string signatureName)
         {
-            List<CourseMainDto> listCourses = new List<CourseMainDto>();
+            List<CourseMainDto> listCoursesbySignatureName = new List<CourseMainDto>();
             using (var sqlDataAccessCourse = new SQLDataAccessCourse())
             {
-                var list = sqlDataAccessCourse.GetCoursesSignature(signatureName).Where(
-                    item => item.IsActive == true);
 
-                list.ToList().ForEach(item => {
-                    listCourses.Add(MapEntityCourseToDto(item));
+                var listSchoolSignatures = sqlDataAccessCourse.GetCourses(schoolId).Where(
+                    item => item.IsActive == true).Where(s => s.Signatures.SignaturesName == signatureName);
+
+
+                listSchoolSignatures.ToList().ForEach(item => {
+                    listCoursesbySignatureName.Add(MapEntityCourseToDto(item));
                 });
             }
-            return listCourses;
+            return listCoursesbySignatureName;
         }
 
 

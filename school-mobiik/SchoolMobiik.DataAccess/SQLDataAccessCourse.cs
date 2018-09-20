@@ -13,20 +13,7 @@ namespace SchoolMobiik.DataAccess
         {
 
         }
-        public IEnumerable<Course> GetCoursesSignature(string signatureName)
-        {
-
-
-            List<Course> CourseList = new List<Course>();
-            using (var context = new SemillerosDBContext())
-            {
-                var list = context.Course.Where(s => s.Signatures.SignaturesName == signatureName).ToList();
-               
-                CourseList = list;
-            }
-            return CourseList;
-        }
-
+        
         public IEnumerable<Course> GetCourses(string schoolId)
         {
             List<Course> CourseList = new List<Course>();
@@ -35,7 +22,14 @@ namespace SchoolMobiik.DataAccess
                 var list = context.Course.Where(s => s.SchoolId == schoolId).Include(c => c.Teacher)
                     .ThenInclude(t => t.Person)
                     .Include(s => s.Signatures).ToList();
-                //var list = context.Course.Where(s => s.SchoolId == schoolId).ToList();
+
+                CourseList = list;
+            }
+            return CourseList;
+        }
+
+
+        //var list = context.Course.Where(s => s.SchoolId == schoolId).ToList();
         //public IEnumerable<Course> GetCourses(string schoolId)
         //{
         //    List<Course> CourseList = new List<Course>();
@@ -45,7 +39,7 @@ namespace SchoolMobiik.DataAccess
         //    using (var context = new SemillerosDBContext())
         //    {
         //        var list = context.Course.Where(s => s.SchoolId == schoolId).ToList();
-                              
+
         //        list.ForEach(item => {
         //            maestro = context.Teacher.Where(s => s.TeacherId == item.TeacherId).SingleOrDefault();
         //            var result = (from p in context.Person
@@ -65,10 +59,7 @@ namespace SchoolMobiik.DataAccess
         //        });            
 
 
-                CourseList = list;
-            }
-           return CourseList;
-        }
+
 
         public void Dispose()
         {
