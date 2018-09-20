@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit { 
 
   User = <ISchoolUser>{};
-
+  currentUser = <ISchoolUser>{};
   constructor(private schoolUserHttpService: SchoolUserHttpService, private router: Router) { }
 
   ngOnInit() {
@@ -25,11 +25,16 @@ export class LoginComponent implements OnInit {
     this.schoolUserHttpService.PostUser(this.User).subscribe(
       data => {
         console.log(data),
-        this.User = data
+          this.User = data
+        if (data == null) {
+          alert('El usuario o la contraseña son incorrectos');
+        }
+
       }
+     
     )
 
-    console.log(this.User);
+
     
   };
 
