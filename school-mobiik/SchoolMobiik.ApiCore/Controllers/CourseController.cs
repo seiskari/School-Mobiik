@@ -9,7 +9,7 @@ using SchoolMobiik.DTOs;
 
 namespace SchoolMobiik.ApiCore.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("schools")]
     [ApiController]
     public class CourseController : ControllerBase
     {
@@ -20,14 +20,35 @@ namespace SchoolMobiik.ApiCore.Controllers
         }
 
         // GET api/values
-        [HttpGet]
+        [HttpGet("{schoolId}/courses")]
         public IEnumerable<CourseMainDto> Get(string schoolId)
         {
-            schoolId = "Escuela1";
+            //schoolId = "Escuela1";
             var courseList = processCourse.GetCoursesBySchool(schoolId);
+
+            //string signatureName = "Español";
+            //var courseList2 = processCourse.GetCourseBySignatureName(signatureName);
             return courseList;
             //return new string[] { "value1", "value2" };
         }
+
+        // GET api/values
+        [HttpGet("{schoolId}/courses/{signatureName}")]
+        public IEnumerable<CourseMainDto> Get(string schoolId,string signatureName)
+        {
+            //schoolId = "Escuela1";
+            //var courseList = processCourse.GetCoursesBySchool(schoolId);
+            //return courseList;
+
+            //signatureName = "Español";
+            var courseList2 = processCourse.GetCourseBySignatureName(schoolId,signatureName);
+            return courseList2;
+        }
+
+
+
+
+
 
     }
 }
